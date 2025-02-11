@@ -1,0 +1,8 @@
+{% include 'blog/navbar.html' %}
+<div class="container">
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
+    <small>Publié le {{ post.created_at }}</small>
+    <a href="{% url 'post_list' %}" class="btn btn-secondary">Retour</a>
+</div>
+{% include 'blog/footer.html' %}

@@ -1,0 +1,10 @@
+{% include 'blog/navbar.html' %}
+<div class="container">
+    <h1>Créer un article</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Publier</button>
+    </form>
+</div>
+{% include 'blog/footer.html' %}
