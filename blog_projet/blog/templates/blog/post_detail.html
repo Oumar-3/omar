@@ -3,6 +3,6 @@
     <h1>{{ post.title }}</h1>
     <p>{{ post.content }}</p>
     <small>Publié le {{ post.created_at }}</small>
-    <a href="{% url 'post_list' %}" class="btn btn-secondary">Retour</a>
+    <a href="{% url 'post_list' %}" class="btn btn-secondary"><button>Retour</button></a>
 </div>
-{% include 'blog/footer.html' %}
+{% include 'blog/footer.html'%}

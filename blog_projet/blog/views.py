@@ -2,6 +2,12 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post
 from .forms import PostForm
 
+def index (request):
+    return render(request,'blog/index.html')
+
+def blog (request):
+    return render(request, 'blog/blog.html')
+
 def post_list(request):
     posts = Post.objects.all().order_by('-created_at')
     return render(request, 'blog/post_list.html', {'posts': posts})
@@ -19,3 +25,5 @@ def create_post(request):
     else:
         form = PostForm()
     return render(request, 'blog/create_post.html', {'form': form})
+
+   
